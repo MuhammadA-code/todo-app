@@ -1,0 +1,17 @@
+todo1:
+  title: "Todo 1"
+  description: "Description 1"
+  status: pending
+  user: one
+
+todo2:
+  title: "Todo 2"
+  description: "Description 2"
+  status: completed
+  user: one
+
+todo3:
+  title: "Todo 3"
+  description: "Description 3"
+  status: pending
+  user: one
