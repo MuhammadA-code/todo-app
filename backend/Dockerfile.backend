@@ -1,0 +1,21 @@
+FROM ruby:3.1.1
+
+# Install dependencies
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+
+# Set working directory
+WORKDIR /app
+
+# Install gems
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
+RUN bundle install
+
+# Copy the application code
+COPY . /app
+
+# Expose the port
+EXPOSE 3000
+
+# Start the Rails server
+CMD ["rails", "server", "-b", "0.0.0.0"]
