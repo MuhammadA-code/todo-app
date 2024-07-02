@@ -4,15 +4,15 @@ FROM ruby:3.1.1
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 
 # Set working directory
-WORKDIR /app
+WORKDIR /backend
 
 # Install gems
-COPY Gemfile /app/Gemfile
-COPY Gemfile.lock /app/Gemfile.lock
+COPY Gemfile /backend/Gemfile
+COPY Gemfile.lock /backend/Gemfile.lock
 RUN bundle install
 
 # Copy the application code
-COPY . /app
+COPY . /backend
 
 # Expose the port
 EXPOSE 3000

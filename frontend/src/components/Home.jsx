@@ -12,7 +12,7 @@ const Home = () => {
   const [password, setPassword] = useState("");
   const [page, setPage] = useState(true);
   const { login } = useContext(AuthContext);
-  const { signup } = useContext(AuthContext);
+  // const { signup } = useContext(AuthContext);
   const navigate = useNavigate();
   const [loggedIn, setLoggedIn] = useState(false);
 

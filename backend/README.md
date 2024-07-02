@@ -15,7 +15,9 @@ This README provides instructions to get the Rails application up and running us
 
 ## Database creation and initialization
 rails db:create db:migrate
-
+<!-- OR -->
+<!-- while running docker compose up in separate terminal within same directory -->
+docker-compose exec backend rails db:migrate 
 
 To run the whole application Backend and Frontend goto the root directory and run:
 for first time: docker compose up --build or docker-compose up --build

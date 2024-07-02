@@ -29,13 +29,13 @@ const AuthProvider = ({ children }) => {
 
   const signup = async (email, password) => {
     try {
+      console.log('sdfsdfsdfsdfsd')
       const response = await axios.post('/users', {
         user: {
           email,
           password,
         },
       });
-      debugger
       if (response.status === 200) {
         return response.status
       } else {

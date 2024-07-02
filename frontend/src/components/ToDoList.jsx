@@ -40,7 +40,8 @@ const ToDoList = () => {
   const token = localStorage.getItem('Authorization')
   axios.defaults.baseURL = "http://localhost:3000";
   axios.defaults.headers.common["Authorization"] = token;
-
+  console.log('token', token)
+  console.log('axions', axios.defaults)
   useEffect(() => {
     const fetchTodos = async () => {
       const response = await axios.get("/todos", {
